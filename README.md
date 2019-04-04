@@ -120,12 +120,9 @@ The following is a directory tree describing the contents of the repository and 
 .
 ├── animations                                  # folder for paraview output and ffmpeg rendering
 │   ├── 00_vel_type_id.0900.png                 # image showing a model time step from run 00.
-│   ├── 00_geometry.png                         # image of run 00 geometry
-│   ├── 01_geometry.png                         # image of run 01 geometry
-│   └── 02_geometry.png                         # image of run 02 geometry
+│   └── *_geometry.png                          # image of geometry from each model run
 ├── bin                                         # non-SPH scripts
-│   ├── timelapse10                             # 10 fps ffmpeg timelapse bash script (linux/unix)
-│   └── timelapse20                             # 20 fps ffmpeg timelapse bash script (linux/unix)
+│   └── timelapse*                              # unix/linux bash scripts which use ffmpeg to create XXfps timelapses from a folder full of successively-named .png files, such as produced by ParaView's "save animation" feature
 ├── gis                                         # GIS and geometry
 │   ├── geom_thwaites.*                         # shapefile of transect used to query BEDMAP2 elevations
 │   ├── geom_thwaites_pts.*                     # points along transect used for query (1 km spacing)
