@@ -45,7 +45,7 @@
 					<matrixreset />
 					<setmkfluid mk="0"/>
 					<setdrawmode mode="face"/>
-					<move x="0.0" y="0" z="-0.065" />
+					<move x="-0.01" y="0" z="-0.065" />
 					<drawfilestl file="z_mw.stl" objname="Meltwater">
 						<drawscale x="0.001" y="0.001" z="0.001" />
 					</drawfilestl>

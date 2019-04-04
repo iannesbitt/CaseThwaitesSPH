@@ -1,6 +1,5 @@
 # CaseThwaitesSPH
 
-*Be warned: this repository is huge, as it contains model outputs of a very processor-intensive piece of physics code which generates particle information at thousands of time steps in each model run.*
 ![Image of dynamics in model output](animations/00_vel_type_id.0900.png)
 
 ## What
@@ -13,7 +12,8 @@ The goal of this project is to understand the forces and dynamic physics that ac
 
 ## How
 
-DualSPHysics is free and open-source code to model free-surface flow phenomena and calculate forces acting on a per-particle basis, where Eulerian and continuum models struggle. Models are constructed of particles, rather than meshes, which allows for computation of fluid interaction without the need to recompute mesh extent at each time step. Each particle has a bell curve-like "smoothing kernel" which defines the strength of its interaction with neighboring particles. Because so many interactions can happen over the course of a model run, DualSPHysics uses [CUDA](https://developer.nvidia.com/cuda-zone) to interface with graphics processing unit (GPU) computing power. Since GPUs contain many smaller cores whereas central processing units (CPUs) contain a few more powerful ones, GPUs can calculate interactions between many particles much more efficiently. For this reason, if you intend to run this code, we highly recommend running it with a CUDA-capable GPU.
+DualSPHysics is free and open-source code to model free-surface flow phenomena and calculate forces acting on a per-particle basis, where Eulerian and continuum models struggle. Models are constructed of particles, rather than meshes, which allows for computation of fluid interaction without the need to recompute mesh extent at each time step. Each particle has a bell curve-like "smoothing kernel" which defines the strength of its interaction with neighboring particles. Because so many interactions can happen over the course of a model run, DualSPHysics uses [CUDA](https://developer.nvidia.com/cuda-zone) to interface with graphics processing unit (GPU) computing power. Since GPUs contain many smaller cores whereas central processing units (CPUs) contain a few more powerful ones, GPUs can calculate interactions between many particles much more efficiently. For this reason, if you intend to run this code, we highly recommend running it with a CUDA-capable GPU. *Be warned: outputs from this model are huge, as it calculates particle information at thousands of time steps in each model run.*
+
 
 ### Code projects used to run the model and create outputs
 
