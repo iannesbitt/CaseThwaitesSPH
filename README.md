@@ -45,7 +45,11 @@ We used equal artificial viscosities for all fluids in the model (CDW, meltwater
 
 #### Density
 
-- Air: 1.18 kg/m^{3}
+We used idealized air density at 
+
+- **Air**: 1.18 kg m<sup>-3</sup>
+- **Meltwater**: 1000 kg m<sup>-3</sup>
+- **CDW**: 1030 kg m<sup>-3</sup>
 
 #### Atmospheric forcing
 
@@ -71,7 +75,7 @@ We increased viscosity of water in order to slow particle migration across the w
 
 #### Density
 
-We decreased CDW density from 1030 kg/m<sup>3</sup> to 1028 kg/m<sup>3</sup> to more accurately reflect the density of CDW at measured salinity and temperature values reported in Cook et al. ([2016](https://doi.org/10.1126/science.aae0017)). We increased meltwater density from 1000 kg/m<sup>3</sup> to 1015 kg/m<sup>3</sup> in order to keep a strong density gradient but move towards real "high meltwater fraction" temperature and salinity values measured around Thwaites.
+We decreased CDW density from 1030 kg m<sup>-3</sup> to 1028 kg m<sup>-3</sup> to more accurately reflect the density of CDW at measured salinity and temperature values reported in Cook et al. ([2016](https://doi.org/10.1126/science.aae0017)). We increased meltwater density from 1000 kg m<sup>-3</sup> to 1015 kg m<sup>-3</sup> in order to keep a strong density gradient but move towards real "high meltwater fraction" temperature and salinity values measured around Thwaites.
 
 #### Atmospheric forcing
 
@@ -96,7 +100,7 @@ Viscosity is the same as run 01.
 
 #### Density
 
-Meltwater density observed in the eastern Amundsen Sea only differs from CDW in density by approximately 0.7 kg/m<sup>3</sup> (P. Dutrieux, pers. comm.). For the purposes of this model, we initialized with a slightly higher density gradient in order to speed up the processes in model-time.
+Meltwater density observed in the eastern Amundsen Sea only differs from CDW in density by approximately 0.33 kg/m<sup>3</sup> (P. Dutrieux, pers. comm.). For the purposes of this model, we initialized with a slightly higher density gradient in order to speed up the processes in model-time.
 
 #### Atmospheric forcing
 
