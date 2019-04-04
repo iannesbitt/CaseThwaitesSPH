@@ -190,7 +190,7 @@
                 <phasetype value="0"/>
             </property>
             <property name="air">
-                <rhop0 value="1.18"/>
+                <rhop0 value="1.44"/>
                 <gamma value="1.4"/>
                 <cs0 value="150"/>
                 <visco value="0.01"/>

@@ -45,7 +45,7 @@ We used equal artificial viscosities for all fluids in the model (CDW, meltwater
 
 #### Density
 
-We used idealized air density at 
+We used idealized values of fluid density for atmospheric, meltwater, and CDW particles, as we wanted to test that the density gradient would yield sufficient buoyancy to represent the physical processes at work beneath the ice sheet. We assumed that meltwater was completely fresh and 0.1 degree C, and assigned CDW a value that approximated the densest ocean water observations.
 
 - **Air**: 1.18 kg m<sup>-3</sup>
 - **Meltwater**: 1000 kg m<sup>-3</sup>
@@ -77,6 +77,10 @@ We increased viscosity of water in order to slow particle migration across the w
 
 We decreased CDW density from 1030 kg m<sup>-3</sup> to 1028 kg m<sup>-3</sup> to more accurately reflect the density of CDW at measured salinity and temperature values reported in Cook et al. ([2016](https://doi.org/10.1126/science.aae0017)). We increased meltwater density from 1000 kg m<sup>-3</sup> to 1015 kg m<sup>-3</sup> in order to keep a strong density gradient but move towards real "high meltwater fraction" temperature and salinity values measured around Thwaites.
 
+- **Air**: 1.18 kg m<sup>-3</sup>
+- **Meltwater**: 1015 kg m<sup>-3</sup>
+- **CDW**: 1028 kg m<sup>-3</sup>
+
 #### Atmospheric forcing
 
 We re-initialized with the same wind paddle geometry and velocity.
@@ -100,7 +104,13 @@ Viscosity is the same as run 01.
 
 #### Density
 
-Meltwater density observed in the eastern Amundsen Sea only differs from CDW in density by approximately 0.33 kg/m<sup>3</sup> (P. Dutrieux, pers. comm.). For the purposes of this model, we initialized with a slightly higher density gradient in order to speed up the processes in model-time.
+Meltwater density observed in the eastern Amundsen Sea only differs from CDW in density by approximately 0.33 kg/m<sup>3</sup> (P. Dutrieux, pers. comm.). For the purposes of this experiment, we initialized with a slightly higher density gradient in order to speed up the physical processes in model-time.
+
+We also increased the density value of atmospheric particles to more accurately reflect that of air masses which contribute to catabatic wind flow from the ice sheet to the Southern Ocean.
+
+- **Air**: 1.44 kg m<sup>-3</sup>
+- **Meltwater**: 1026 kg m<sup>-3</sup>
+- **CDW**: 1028 kg m<sup>-3</sup>
 
 #### Atmospheric forcing
 
@@ -164,8 +174,8 @@ The following is a directory tree describing the contents of the repository and 
 
 ## References
 
-Cook, A. J., Holland, P. R., Meredith, M. P., Murray, T., Luckman, A., & Vaughan, D. G. (2016). Ocean forcing of glacier retreat in the western antarctic peninsula. Science, v. 353 no. 6296, 283-286. [doi:10.1126/science.aae0017](https://doi.org/10.1126/science.aae0017)
+Cook, A. J., Holland, P. R., Meredith, M. P., Murray, T., Luckman, A., & Vaughan, D. G. (2016). Ocean forcing of glacier retreat in the western antarctic peninsula. Science, v. 353 no. 6296, 283-286. [doi:10.1126/science.aae0017](https://doi.org/10.1126/science.aae0017).
 
 Enderlin, E. M., & Hamilton, G. S. (2014). *Estimates of iceberg submarine melting from high-resolution digital elevation models: application to Sermilik Fjord, East Greenland*. Journal of Glaciology v. 60 no. 224, pp. 1084-1092, [doi:10.3189/2014JoG14J085](https://doi.org/10.3189/2014JoG14J085).
 
-Le Brocq, A. M., Le Brocq, A. M., Ross, N., Griggs, J. A., & Bingham, R. G. (2013). *Evidence from ice shelves for channelized meltwater flow beneath the antarctic ice sheet*. Nature Geoscience. v. 6 no. 11, pp. 945–948, [doi:10.1038/ngeo1977](https://doi.org/10.1038/ngeo1977)
+Le Brocq, A. M., Le Brocq, A. M., Ross, N., Griggs, J. A., & Bingham, R. G. (2013). *Evidence from ice shelves for channelized meltwater flow beneath the antarctic ice sheet*. Nature Geoscience. v. 6 no. 11, pp. 945–948, [doi:10.1038/ngeo1977](https://doi.org/10.1038/ngeo1977).
