@@ -57,7 +57,7 @@ This model generates five wind paddles, which each travel at 3 model-meters per 
 
 #### Runtime
 
-This run was 5 model-seconds long and consists of 1000 samples (sample rate 0.005 model-seconds). It took ~12 hours to compute on a NVIDIA GeForce 1060.
+This run was 5 model-seconds long and consists of 1000 samples (sample rate 0.005 model-seconds). It took ~12 hours to compute on a NVIDIA GeForce GTX 1060.
 
 ## Run 01 - 2019-04-02
 ### Geometry
@@ -87,7 +87,7 @@ We re-initialized with the same wind paddle geometry and velocity.
 
 #### Runtime
 
-This run was 20 model-seconds long and consists of 4000 samples (sample rate 0.005 model-seconds). It took ~22 hours to compute on a NVIDIA GeForce 1060.
+This run was 20 model-seconds long and consists of 4000 samples (sample rate 0.005 model-seconds). It took ~22 hours to compute on a NVIDIA GeForce GTX 1060.
 
 ## Run 02 - 2019-04-04
 ### Geometry
@@ -104,7 +104,7 @@ Viscosity is the same as run 01.
 
 #### Density
 
-Meltwater density observed in the eastern Amundsen Sea only differs from CDW in density by approximately 0.33 kg/m<sup>3</sup> (P. Dutrieux, pers. comm.). For the purposes of this experiment, we initialized with a slightly higher density gradient in order to speed up the physical processes in model-time.
+Meltwater density observed in the eastern Amundsen Sea only differs from CDW in density by approximately 0.33 kg/m<sup>3</sup> (P. Dutrieux, pers. comm.; [Jenkins et al., 2018](https://doi.org/10.1038/s41561-018-0207-4)). For the purposes of this experiment, we initialized with a slightly higher density gradient in order to speed up the physical processes in model-time.
 
 We also increased the density value of atmospheric particles to more accurately reflect that of air masses which contribute to catabatic wind flow from the ice sheet to the Southern Ocean.
 
@@ -118,7 +118,7 @@ We re-initialized with the same wind paddle geometry and velocity.
 
 #### Runtime
 
-This run was 30 model-seconds long and consists of 3000 samples (sample rate 0.01 model-seconds).
+This run was 30 model-seconds long and consists of 3000 samples (sample rate 0.01 model-seconds). It took ~30 hours to compute on a NVIDIA GeForce GTX 1060.
 
 ## Description of project contents
 
@@ -174,8 +174,10 @@ The following is a directory tree describing the contents of the repository and 
 
 ## References
 
-Cook, A. J., Holland, P. R., Meredith, M. P., Murray, T., Luckman, A., & Vaughan, D. G. (2016). Ocean forcing of glacier retreat in the western antarctic peninsula. Science, v. 353 no. 6296, 283-286. [doi:10.1126/science.aae0017](https://doi.org/10.1126/science.aae0017).
+Cook, A. J., Holland, P. R., Meredith, M. P., Murray, T., Luckman, A., & Vaughan, D. G. (2016). *Ocean forcing of glacier retreat in the western antarctic peninsula*. Science, v. 353 no. 6296, 283-286. [doi:10.1126/science.aae0017](https://doi.org/10.1126/science.aae0017).
 
 Enderlin, E. M., & Hamilton, G. S. (2014). *Estimates of iceberg submarine melting from high-resolution digital elevation models: application to Sermilik Fjord, East Greenland*. Journal of Glaciology v. 60 no. 224, pp. 1084-1092, [doi:10.3189/2014JoG14J085](https://doi.org/10.3189/2014JoG14J085).
+
+Jenkins, A., Shoosmith, D., Dutrieux, P., & Jacobs, S. (2018). *West antarctic ice sheet retreat in the amundsen sea driven by decadal oceanic variability*. Nature Geoscience. v. 11 no. 10. [doi:10.1038/s41561-018-0207-4](https://doi.org/10.1038/s41561-018-0207-4)
 
 Le Brocq, A. M., Le Brocq, A. M., Ross, N., Griggs, J. A., & Bingham, R. G. (2013). *Evidence from ice shelves for channelized meltwater flow beneath the antarctic ice sheet*. Nature Geoscience. v. 6 no. 11, pp. 945–948, [doi:10.1038/ngeo1977](https://doi.org/10.1038/ngeo1977).
