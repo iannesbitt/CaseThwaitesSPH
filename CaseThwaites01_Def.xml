@@ -30,6 +30,7 @@
 					<drawfilestl file="z_ice_bed.stl" objname="Bed">
 						<drawscale x="0.001" y="0.001" z="0.001" />
 					</drawfilestl>
+					<!-- Note: the following commented command was used to convert large STL files to small, quantized VTKs. -->
 					<!--<shapeout file="z_ice_bed" />-->
 					<matrixreset />
 					<setmkfluid mk="0"/>
@@ -38,6 +39,7 @@
 					<drawfilestl file="z_mw.stl" objname="Meltwater">
 						<drawscale x="0.001" y="0.001" z="0.001" />
 					</drawfilestl>
+					<!-- Note: the following commented command was used to convert large STL files to small, quantized VTKs. -->
 					<!--<shapeout file="z_mw" />-->
 					<matrixreset />
 					<setmkbound mk="1"/>
@@ -45,6 +47,7 @@
 					<drawfilestl file="z_ice_sfc.stl" objname="Ice surface">
 						<drawscale x="0.001" y="0.001" z="0.001" />
 					</drawfilestl>
+					<!-- Note: the following commented command was used to convert large STL files to small, quantized VTKs. -->
 					<!--<shapeout file="z_ice_sfc" />-->
 					<matrixreset />
 					<setmkbound mk="1"/>
@@ -52,6 +55,7 @@
 					<drawfilestl file="z_ice_bott.stl" objname="Ice-bottom">
 						<drawscale x="0.001" y="0.001" z="0.001" />
 					</drawfilestl>
+					<!-- Note: the following commented command was used to convert large STL files to small, quantized VTKs. -->
 					<!--<shapeout file="z_ice_bott" />-->
 					<matrixreset />
 					<setmkbound mk="2"/>
@@ -244,8 +248,8 @@
             <parameter key="DtMin" value="0.0000001" comment="Minimum time step (default=coefdtmin*h/speedsound)" units_comment="seconds" />
             <parameter key="#DtFixed" value="DtFixed.dat" comment="Dt values are loaded from file (default=disabled)" />
             <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT. 1:All, 0:Only fluid/floating (default=0)" />
-            <parameter key="TimeMax" value="20" comment="Time of simulation" units_comment="seconds" />
-            <parameter key="TimeOut" value="0.005" comment="Time out data" units_comment="seconds" />
+            <parameter key="TimeMax" value="30" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeOut" value="0.01" comment="Time out data" units_comment="seconds" />
             <parameter key="IncZ" value="0" comment="Increase of Z+" units_comment="decimal" />
             <parameter key="PartsOutMax" value="1" comment="%/100 of fluid particles allowed to be excluded from domain (default=1)" units_comment="decimal" />
             <parameter key="RhopOutMin" value="0" comment="Minimum rhop valid (default=700)" units_comment="kg/m^3" />

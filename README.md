@@ -53,7 +53,7 @@ This model generates five wind paddles, which each travel at 3 model-meters per 
 
 #### Runtime
 
-This run was 5 model-seconds long and consists of 1000 samples (sample rate 0.005 model-seconds).
+This run was 5 model-seconds long and consists of 1000 samples (sample rate 0.005 model-seconds). It took ~12 hours to compute on a NVIDIA GeForce 1060.
 
 ## Run 01 - 2019-04-02
 ### Geometry
@@ -71,7 +71,7 @@ We increased viscosity of water in order to slow particle migration across the w
 
 #### Density
 
-We decreased CDW density from 1030 kg/m<sup>3</sup> to 1028 kg/m<sup>3</sup> to more accurately reflect the density of CDW at measured salinity and temperature values.
+We decreased CDW density from 1030 kg/m<sup>3</sup> to 1028 kg/m<sup>3</sup> to more accurately reflect the density of CDW at measured salinity and temperature values reported in Cook et al. ([2016](https://doi.org/10.1126/science.aae0017)). We increased meltwater density from 1000 kg/m<sup>3</sup> to 1015 kg/m<sup>3</sup> in order to keep a strong density gradient but move towards real "high meltwater fraction" temperature and salinity values measured around Thwaites.
 
 #### Atmospheric forcing
 
@@ -79,7 +79,7 @@ We re-initialized with the same wind paddle geometry and velocity.
 
 #### Runtime
 
-This run was 20 model-seconds long and consists of 4000 samples (sample rate 0.005 model-seconds).
+This run was 20 model-seconds long and consists of 4000 samples (sample rate 0.005 model-seconds). It took ~22 hours to compute on a NVIDIA GeForce 1060.
 
 ## Run 02 - 2019-04-04
 ### Geometry
@@ -104,7 +104,7 @@ We re-initialized with the same wind paddle geometry and velocity.
 
 #### Runtime
 
-This run was 20 model-seconds long and consists of 4000 samples (sample rate 0.005 model-seconds).
+This run was 30 model-seconds long and consists of 3000 samples (sample rate 0.01 model-seconds).
 
 ## Description of project contents
 
@@ -135,8 +135,14 @@ The following is a directory tree describing the contents of the repository and 
 │       ├── z_ice_bott.xyz                      # most recent version of ice bottom geometry
 │       ├── z_ice_sfc.xyz                       # most recent version of ice surface geometry
 │       └── z_mw.xyz                            # most recent version of meltwater (bottom) geometry
+├── 00_z_ice_bed.stl                            # bed and seafloor geometry STL from BEDMAP2 used for run 00, can be read with <drawfilestl file="00_z_ice_bed.stl">
+├── 00_z_ice_bott.stl                           # ice bottom geometry STL from BEDMAP2, can be read from xml by GenCase with <drawfilestl file="00_z_ice_bott.stl">
+├── 00_z_ice_sfc.stl                            # ice surface geometry STL from BEDMAP2, can be read from xml by GenCase with <drawfilestl file="00_z_ice_sfc.stl">
+├── 00_z_mw.stl                                 # meltwater geometry STL, can be read from xml by GenCase with <drawfilestl file="00_z_mw.stl">
 ├── casedata.dsphdata                           # SPH synthesis of case data described by case description XML
-├── CaseThwaites01_Def.xml                      # case description XML
+├── 00_CaseThwaites01_Def.xml                   # run 00 case description XML
+├── 01_CaseThwaites01_Def.xml                   # run 01 case description XML
+├── CaseThwaites01_Def.xml                      # current case description XML (not yet run)
 ├── DSPH_Case.FCStd                             # DesignSPHysics file used to create the initial geometry
 ├── DSPH_Case.FCStd1                            # DesignSPHysics file used to create the initial geometry
 ├── GenCase4_linux64.bi4                        # GenCase output binary file
@@ -144,20 +150,17 @@ The following is a directory tree describing the contents of the repository and 
 ├── GenCase4_linux64_MkCells.vtk                # GenCase output of particle generation cells
 ├── GenCase4_linux64.out                        # command line output of GenCase
 ├── GenCase4_linux64.xml                        # GenCase synthesis xml
-├── GenCase4_linux64_z_ice_bed_Dp.vtk           # quantized (downsized) bed geometry
-├── GenCase4_linux64_z_ice_bott_Dp.vtk          # quantized (downsized) ice bottom geometry
-├── GenCase4_linux64_z_ice_sfc_Dp.vtk           # quantized (downsized) ice surface geometry
-├── GenCase4_linux64_z_mw_Dp.vtk                # quantized (downsized) meltwater bottom geometry
+├── GenCase4_linux64_z_ice_bed_Dp.vtk           # quantized (downsized) bed geometry from BEDMAP2, can be read from xml by GenCase with <drawfilevtk file="GenCase4_linux64_z_ice_bed_Dp.vtk">
+├── GenCase4_linux64_z_ice_bott_Dp.vtk          # quantized (downsized) ice bottom geometry from BEDMAP2, can be read from xml by GenCase with <drawfilevtk file="GenCase4_linux64_z_ice_bott_Dp.vtk">
+├── GenCase4_linux64_z_ice_sfc_Dp.vtk           # quantized (downsized) ice surface geometry from BEDMAP2, can be read from xml by GenCase with <drawfilevtk file="GenCase4_linux64_z_ice_sfc_Dp.vtk">
+├── GenCase4_linux64_z_mw_Dp.vtk                # quantized (downsized) meltwater bottom geometry, can be read from xml by GenCase with <drawfilevtk file="GenCase4_linux64_z_mw_Dp.vtk">
 ├── xCaseThwaites_threephase_linux64_GPU.sh     # bash script used to run all model processing steps (linux/unix version)
-├── 00_*.xyz                                    # earlier versions of geometry definition files
-├── z_ice_bed.xyz                               # bed and seafloor geometry XYZ-CSV from BEDMAP2
-├── z_ice_bott.xyz                              # ice bottom geometry XYZ-CSV from BEDMAP2
-├── z_ice_sfc.xyz                               # ice surface geometry XYZ-CSV from BEDMAP2
-├── z_mw.xyz                                    # meltwater geometry XYZ-CSV
 └── README.md                                   # this file
 ```
 
 ## References
+
+Cook, A. J., Holland, P. R., Meredith, M. P., Murray, T., Luckman, A., & Vaughan, D. G. (2016). Ocean forcing of glacier retreat in the western antarctic peninsula. Science, v. 353 no. 6296, 283-286. [doi:10.1126/science.aae0017](https://doi.org/10.1126/science.aae0017)
 
 Enderlin, E. M., & Hamilton, G. S. (2014). *Estimates of iceberg submarine melting from high-resolution digital elevation models: application to Sermilik Fjord, East Greenland*. Journal of Glaciology v. 60 no. 224, pp. 1084-1092, [doi:10.3189/2014JoG14J085](https://doi.org/10.3189/2014JoG14J085).
 
