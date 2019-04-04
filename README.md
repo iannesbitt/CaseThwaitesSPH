@@ -20,6 +20,7 @@ DualSPHysics is free and open-source code to model free-surface flow phenomena a
 All code used to create this project is proudly free and open-source. All observational data used to create seafloor and ice sheet geometry is released through the British Antarctic Survey's BEDMAP2 dataset and is freely available through Quantarctica 3.1.
 
 - Ice sheet geometry: [BEDMAP2](https://www.bas.ac.uk/project/bedmap-2/) data from [Quantarctica](http://quantarctica.npolar.no/) 3.1 (queried using [QGIS](https://github.com/qgis/QGIS) 3.6)
+- Conversion of XYZ to STL surfaces: [xyz2stl](https://github.com/NWRichmond/xyz2stl) v. Sept 2017 by [Nick Richmond](https://github.com/NWRichmond)
 - Physics solver: [DualSPHysics](https://github.com/DualSPHysics/DualSPHysics) 4.2
 - Visualization: [Paraview](https://github.com/Kitware/ParaView) 5.4.1
 - Animations: [ffmpeg](https://github.com/FFmpeg/FFmpeg) 4.1.2
@@ -109,50 +110,17 @@ The following is an abbreviated directory tree describing the contents of the re
 
 ```
 .
-├── 00_CaseThwaites01_out
-│   ├── CaseThwaites01_All.vtk
-│   ├── CaseThwaites01.bi4
-│   ├── CaseThwaites01_Bound.vtk
-│   ├── CaseThwaites01__Dp.vtk
-│   ├── CaseThwaites01_Fluid.vtk
-│   ├── CaseThwaites01_MkCells.vtk
-│   ├── CaseThwaites01.out
-│   ├── CaseThwaites01.xml
-│   ├── Part_*.bi4
-│   ├── Part_Head.ibi4
-│   ├── particles
-│   │   ├── PartFluid_*.vtk
-│   │   ├── PartFluidOut_0000.vtk
-│   │   ├── PartTank_*.vtk
-│   │   └── _ResumeFluidOut.csv
-│   ├── PartInfo.ibi4
-│   ├── PartOut_000.obi4
-│   ├── pressure
-│   ├── Run.csv
-│   ├── Run.out
-│   └── velocity
 ├── animations
 │   ├── 00.pvsm
 │   ├── 00_vel_type_id.0900.png
 │   ├── 00_geometry.png
 │   ├── 01_geometry.png
 │   └── 02_geometry.png
+├── bin
+│   ├── timelapse10
+│   └── timelapse20
 ├── casedata.dsphdata
 ├── CaseThwaites01_Def.xml
-├── CaseThwaites01_out
-│   ├── CaseThwaites01_All.vtk
-│   ├── CaseThwaites01.bi4
-│   ├── CaseThwaites01_Bound.vtk
-│   ├── CaseThwaites01__Dp.vtk
-│   ├── CaseThwaites01_Fluid.vtk
-│   ├── CaseThwaites01_MkCells.vtk
-│   ├── CaseThwaites01.out
-│   ├── CaseThwaites01.xml
-│   ├── Part_*.bi4
-│   ├── Part_Head.ibi4
-│   ├── PartInfo.ibi4
-│   ├── PartOut_000.obi4
-│   └── Run.out
 ├── DSPH_Case.FCStd
 ├── DSPH_Case.FCStd1
 ├── GenCase4_linux64.bi4
@@ -171,3 +139,6 @@ The following is an abbreviated directory tree describing the contents of the re
 
 ## References
 
+Enderlin, E. M., & Hamilton, G. S. (2014). Estimates of iceberg submarine melting from high-resolution digital elevation models: application to Sermilik Fjord, East Greenland. Journal of Glaciology v. 60 no. 224. pp. 1084-1092.
+
+Le Brocq, A. M., Le Brocq, A. M., Ross, N., Griggs, J. A., & Bingham, R. G. (2013). Evidence from ice shelves for channelized meltwater flow beneath the antarctic ice sheet. Nature Geoscience. 6, pages 945–948 doi:10.1038/ngeo1977
