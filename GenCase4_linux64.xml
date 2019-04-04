@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- Case name: CaseThwaites01 -->
-<case app="GenCase4 v4.0.079 (16-10-2018)" date="04-04-2019 11:36:11">
+<case app="GenCase4 v4.0.079 (16-10-2018)" date="04-04-2019 12:48:14">
     <casedef>
         <constantsdef>
             <lattice bound="1" fluid="1" />
@@ -44,7 +44,7 @@
                     <matrixreset />
                     <setmkfluid mk="0" />
                     <setdrawmode mode="face" />
-                    <move x="0.0" y="0" z="-0.065" />
+                    <move x="-0.01" y="0" z="-0.105" />
                     <drawfilestl file="z_mw.stl" objname="Meltwater">
                         <drawscale x="0.001" y="0.001" z="0.001" />
                     </drawfilestl>
@@ -246,18 +246,18 @@
             <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid (default=1300)" units_comment="kg/m^3" />
             <parameter key="XPeriodicIncZ" value="0" comment="Increase of Z with periodic BC" />
         </parameters>
-        <particles np="494754" nb="128679" nbf="125954" mkboundfirst="11" mkfluidfirst="1">
+        <particles np="494755" nb="128684" nbf="125959" mkboundfirst="11" mkfluidfirst="1">
             <_summary>
-                <fixed count="125954" id="0-125953" mkcount="2" mkvalues="11-12" />
-                <moving count="2725" id="125954-128678" mkcount="1" mkvalues="13" />
-                <fluid count="366075" id="128679-494753" mkcount="3" mkvalues="1-3" />
+                <fixed count="125959" id="0-125958" mkcount="2" mkvalues="11-12" />
+                <moving count="2725" id="125959-128683" mkcount="1" mkvalues="13" />
+                <fluid count="366071" id="128684-494754" mkcount="3" mkvalues="1-3" />
             </_summary>
-            <fixed mkbound="0" mk="11" begin="0" count="79306" property="basalt" />
-            <fixed mkbound="1" mk="12" begin="79306" count="46648" property="ice" />
-            <moving mkbound="2" mk="13" begin="125954" count="2725" property="air" refmotion="0" />
-            <fluid mkfluid="0" mk="1" begin="128679" count="7796" property="meltwater" />
-            <fluid mkfluid="1" mk="2" begin="136475" count="138923" property="cdw" />
-            <fluid mkfluid="2" mk="3" begin="275398" count="219356" property="air" />
+            <fixed mkbound="0" mk="11" begin="0" count="79311" property="basalt" />
+            <fixed mkbound="1" mk="12" begin="79311" count="46648" property="ice" />
+            <moving mkbound="2" mk="13" begin="125959" count="2725" property="air" refmotion="0" />
+            <fluid mkfluid="0" mk="1" begin="128684" count="10642" property="meltwater" />
+            <fluid mkfluid="1" mk="2" begin="139326" count="136073" property="cdw" />
+            <fluid mkfluid="2" mk="3" begin="275399" count="219356" property="air" />
             <properties>
                 <links>
                     <link mk="1" property="meltwater" />

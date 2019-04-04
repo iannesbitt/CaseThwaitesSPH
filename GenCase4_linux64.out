@@ -53,34 +53,34 @@ Memory: 0.00Gb 0.47Mb (494982)
 FileShapes> _Dp.vtk  shapes:134593  points:5324   (time:0.009s)
 <MAIN (Operations= 59+15+1 = 75)
 
-Triangles: 9290612 (9130803 ignored)
-[Draw-End  time:2.621s]
+Triangles: 9250612 (9091717 ignored)
+[Draw-End  time:2.925s]
 
 [PreparePoints]
 Computing Vtk-Cells data...  (time:0.004s)
 BitSizeTot: 24 (3 + 11+1+9)
-Points loaded: 494754
+Points loaded: 494755
 Sorting points by Z...
 Sorting points by Mk...
 
 List of Points:
 Points -> Fixed-Boundary particles:
-  block[  0] (mk: 11):  79306  -->   79306
+  block[  0] (mk: 11):  79311  -->   79311
   block[  1] (mk: 12):  46648  -->   46648
 Points -> Moving-Boundary particles:
   block[  2] (mk: 13):   2725  -->    2725
 Points -> Fluid particles:
-  block[  3] (mk:  1):   7796  -->    7796
-  block[  4] (mk:  2): 138923  -->  138923
+  block[  3] (mk:  1):  10642  -->   10642
+  block[  4] (mk:  2): 136073  -->  136073
   block[  5] (mk:  3): 219356  -->  219356
 
 Particle summary:
-  Fixed....: 125954  id:(0-125953)   MKs:2 (11-12)
-  Moving...: 2725  id:(125954-128678)   MKs:1 (13)
+  Fixed....: 125959  id:(0-125958)   MKs:2 (11-12)
+  Moving...: 2725  id:(125959-128683)   MKs:1 (13)
   Floating.: 0
-  Fluid....: 366075  id:(128679-494753)   MKs:3 (1-3)
+  Fluid....: 366071  id:(128684-494754)   MKs:3 (1-3)
 
-Total particles: 494754 (bound=128679 (fx=125954 mv=2725 ft=0) fluid=366075)
+Total particles: 494755 (bound=128684 (fx=125959 mv=2725 ft=0) fluid=366071)
 Total MK blocks: 6 (bound=3 (fx=2 mv=1 ft=0) fluid=3)
 
 Maximum depth: 2.198 (automatic)
@@ -90,13 +90,13 @@ Speed of sound: 92.8706 max(92.8706,46.4353)
 
 Coefh:0.919240 (hdp:1.300002)
 
-[PreparePoints-End  time:0.035s]
+[PreparePoints-End  time:0.034s]
 
 [SaveCase2D]
-GenCase4_linux64_MkCells.vtk  (time:0.023s, shapes:820, points:3280)
-GenCase4_linux64.bi4<double>  (time:0.071s)
+GenCase4_linux64_MkCells.vtk  (time:0.000s, shapes:815, points:3260)
+GenCase4_linux64.bi4<double>  (time:0.082s)
 GenCase4_linux64.xml  (time:0.001s)
 
-Save files time: 0.094s
-[SaveCase2D-End  time:0.112s]
+Save files time: 0.083s
+[SaveCase2D-End  time:0.092s]
 
