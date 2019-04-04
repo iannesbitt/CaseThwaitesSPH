@@ -71,7 +71,7 @@ We increased viscosity of water in order to slow particle migration across the w
 
 #### Density
 
-We decreased CDW density from 1030 kg/m3 to 1028 kg/m3 to more accurately reflect the density of CDW at measured salinity and temperature values.
+We decreased CDW density from 1030 kg/m<sup>3</sup> to 1028 kg/m<sup>3</sup> to more accurately reflect the density of CDW at measured salinity and temperature values.
 
 #### Atmospheric forcing
 
@@ -92,11 +92,19 @@ After run 01 we determined that the volume of meltwater was unsatisfactory. We c
 
 #### Viscosity
 
+Viscosity is the same as run 01.
+
 #### Density
+
+Meltwater density observed in the eastern Amundsen Sea only differs from CDW in density by approximately 0.7 kg/m<sup>3</sup> (P. Dutrieux, pers. comm.). For the purposes of this model, we initialized with a slightly higher density gradient in order to speed up the processes in model-time, in order to simulate 
 
 #### Atmospheric forcing
 
+We re-initialized with the same wind paddle geometry and velocity.
+
 #### Runtime
+
+This run was 20 model-seconds long and consists of 4000 samples (sample rate 0.005 model-seconds).
 
 ## Description of project contents
 
@@ -106,39 +114,38 @@ Files that specifically pertain to one model run are prefaced with the number of
 
 ### File structure
 
-The following is an abbreviated directory tree describing the contents of the repository and their function.
+The following is a directory tree describing the contents of the repository and their function.
 
 ```
 .
-├── animations
-│   ├── 00.pvsm
-│   ├── 00_vel_type_id.0900.png
-│   ├── 00_geometry.png
-│   ├── 01_geometry.png
-│   └── 02_geometry.png
-├── bin
-│   ├── timelapse10
-│   └── timelapse20
-├── casedata.dsphdata
-├── CaseThwaites01_Def.xml
-├── DSPH_Case.FCStd
-├── DSPH_Case.FCStd1
-├── GenCase4_linux64.bi4
-├── GenCase4_linux64__Dp.vtk
-├── GenCase4_linux64_MkCells.vtk
-├── GenCase4_linux64.out
-├── GenCase4_linux64.xml
-├── xCaseThwaites_threephase_linux64_GPU.sh
-├── 00_*.stl
-├── z_ice_bed.stl
-├── z_ice_bott.stl
-├── z_ice_sfc.stl
-├── z_mw.stl
-└── README.md
+├── animations                                  # folder for paraview output and ffmpeg rendering
+│   ├── 00_vel_type_id.0900.png                 # image showing a model time step from run 00.
+│   ├── 00_geometry.png                         # image of run 00 geometry
+│   ├── 01_geometry.png                         # image of run 01 geometry
+│   └── 02_geometry.png                         # image of run 02 geometry
+├── bin                                         # non-SPH scripts
+│   ├── timelapse10                             # 10 fps ffmpeg timelapse bash script (linux/unix)
+│   └── timelapse20                             # 20 fps ffmpeg timelapse bash script (linux/unix)
+├── casedata.dsphdata                           # SPH synthesis of case data described by case description XML
+├── CaseThwaites01_Def.xml                      # case description XML
+├── DSPH_Case.FCStd                             # DesignSPHysics file used to create the initial geometry
+├── DSPH_Case.FCStd1                            # DesignSPHysics file used to create the initial geometry
+├── GenCase4_linux64.bi4                        # GenCase output binary file
+├── GenCase4_linux64__Dp.vtk                    # GenCase output of boundary particle limits (use Paraview to display)
+├── GenCase4_linux64_MkCells.vtk                # GenCase output of particle generation cells
+├── GenCase4_linux64.out                        # command line output of GenCase
+├── GenCase4_linux64.xml                        # GenCase synthesis xml
+├── xCaseThwaites_threephase_linux64_GPU.sh     # bash script used to run all model processing steps (linux/unix version)
+├── 00_*.xyz                                    # earlier versions of geometry definition files
+├── z_ice_bed.xyz                               # bed and seafloor geometry XYZ-CSV from BEDMAP2
+├── z_ice_bott.xyz                              # ice bottom geometry XYZ-CSV from BEDMAP2
+├── z_ice_sfc.xyz                               # ice surface geometry XYZ-CSV from BEDMAP2
+├── z_mw.xyz                                    # meltwater geometry XYZ-CSV
+└── README.md                                   # this file
 ```
 
 ## References
 
-Enderlin, E. M., & Hamilton, G. S. (2014). Estimates of iceberg submarine melting from high-resolution digital elevation models: application to Sermilik Fjord, East Greenland. Journal of Glaciology v. 60 no. 224. pp. 1084-1092.
+Enderlin, E. M., & Hamilton, G. S. (2014). *Estimates of iceberg submarine melting from high-resolution digital elevation models: application to Sermilik Fjord, East Greenland*. Journal of Glaciology v. 60 no. 224. pp. 1084-1092.
 
-Le Brocq, A. M., Le Brocq, A. M., Ross, N., Griggs, J. A., & Bingham, R. G. (2013). Evidence from ice shelves for channelized meltwater flow beneath the antarctic ice sheet. Nature Geoscience. 6, pages 945–948 doi:10.1038/ngeo1977
+Le Brocq, A. M., Le Brocq, A. M., Ross, N., Griggs, J. A., & Bingham, R. G. (2013). *Evidence from ice shelves for channelized meltwater flow beneath the antarctic ice sheet*. Nature Geoscience. 6, pages 945–948 doi:10.1038/ngeo1977
