@@ -86,7 +86,7 @@ This run was 20 model-seconds long and consists of 4000 samples (sample rate 0.0
 
 ![Run 02 geometry](animations/02_geometry.png)
 
-After run 01 we determined that the volume of meltwater was unsatisfactory. We calculated the expected meltwater flux for the floating portion of Thwaites using the method described by M. Dryak in her Master's thesis which follows from Enderlin and Hamilton (2014). We then calculated the expected volume of meltwater given this flux and given the subglacial melt discharge modeled by De Brocq et al. (2013).
+After run 01 we determined that the volume of meltwater was unsatisfactory. We calculated the expected meltwater flux for the floating portion of Thwaites using the method described by M. Dryak in her Master's thesis which follows from Enderlin and Hamilton ([2014](https://doi.org/10.3189/2014JoG14J085)). We then calculated the expected volume of meltwater given this flux and given the subglacial melt discharge modeled by De Brocq et al. ([2013](https://doi.org/10.1038/ngeo1977), available in [Quantarctica](http://quantarctica.npolar.no/)).
 
 ### Initialization
 
@@ -158,6 +158,6 @@ The following is a directory tree describing the contents of the repository and 
 
 ## References
 
-Enderlin, E. M., & Hamilton, G. S. (2014). *Estimates of iceberg submarine melting from high-resolution digital elevation models: application to Sermilik Fjord, East Greenland*. Journal of Glaciology v. 60 no. 224. pp. 1084-1092.
+Enderlin, E. M., & Hamilton, G. S. (2014). *Estimates of iceberg submarine melting from high-resolution digital elevation models: application to Sermilik Fjord, East Greenland*. Journal of Glaciology v. 60 no. 224, pp. 1084-1092, [doi:10.3189/2014JoG14J085](https://doi.org/10.3189/2014JoG14J085).
 
-Le Brocq, A. M., Le Brocq, A. M., Ross, N., Griggs, J. A., & Bingham, R. G. (2013). *Evidence from ice shelves for channelized meltwater flow beneath the antarctic ice sheet*. Nature Geoscience. 6, pages 945–948 doi:10.1038/ngeo1977
+Le Brocq, A. M., Le Brocq, A. M., Ross, N., Griggs, J. A., & Bingham, R. G. (2013). *Evidence from ice shelves for channelized meltwater flow beneath the antarctic ice sheet*. Nature Geoscience. v. 6 no. 11, pp. 945–948, [doi:10.1038/ngeo1977](https://doi.org/10.1038/ngeo1977)
