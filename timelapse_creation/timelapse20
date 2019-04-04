@@ -1,0 +1,43 @@
+#! /bin/bash
+
+# Written by Ian Nesbitt, 2017. Distributed under MIT License.
+# Converts set of images to timelapse and copies to web location
+# Requires ffmpeg (see https://www.ffmpeg.org/)
+
+# frames per second
+FPS=20
+
+# the file
+FILE=$(date '+%Y-%m-%d')-${PWD##*/}-${FPS}fps.mp4
+# the image repository
+LOC=$(pwd) # get current folder (default)
+# file type (JPG, PNG, etc)
+type=png
+# the repository
+TMP=$LOC/tmp
+DEST=$LOC/0video
+mkdir $TMP
+mkdir $DEST
+
+if [ -d "$LOC" ]; then
+  cd "$LOC"
+
+  # writes list of files, numbers each list item,
+  # stores number and filename as vars, then renames files with numbering.
+  # numbering is in %d format starting at 1.jpg
+  ls $(pwd)/*.$type | cat -n | while read n f; do cp "$f" "$TMP/$n.$type"; done
+  cd $TMP
+  # converts filenames with %d format to 30fps mp4 starting at image 1
+  ffmpeg -y -start_number 1 -r $FPS  -i \%d.$type -c:v libx264 -pix_fmt yuv420p -c:a aac -strict experimental -vf "pad=ceil(iw/2)*2:ceil(ih/2)*2" "$DEST/$FILE"
+
+  # using the assumed noon image as the cover image
+  # not a huge deal if not there; video will default to first frame
+
+  # removes jpgs in tmp folder
+  rm *.$type
+
+  # removes temp folder
+  #cd ../; rm -r $TMP
+
+fi
+
