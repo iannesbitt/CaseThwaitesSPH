@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!-- Case name: CaseThwaites01 -->
-<case app="GenCase4 v4.0.079 (16-10-2018)" date="04-04-2019 12:48:14">
+<case app="GenCase4 v4.0.079 (16-10-2018)" date="04-04-2019 16:28:43">
     <casedef>
         <constantsdef>
             <lattice bound="1" fluid="1" />
@@ -22,25 +22,15 @@
             </definition>
             <commands>
                 <mainlist>
-                    <setshapemode>dp | bound</setshapemode>
+                    <setshapemode>dp | bound | fluid</setshapemode>
                     <matrixreset />
                     <setmkbound mk="0" />
                     <setdrawmode mode="face" />
                     <drawfilestl file="z_ice_bed.stl" objname="Bed">
                         <drawscale x="0.001" y="0.001" z="0.001" />
                     </drawfilestl>
-                    <matrixreset />
-                    <setmkbound mk="1" />
-                    <setdrawmode mode="face" />
-                    <drawfilestl file="z_ice_bott.stl" objname="Ice-bottom">
-                        <drawscale x="0.001" y="0.001" z="0.001" />
-                    </drawfilestl>
-                    <matrixreset />
-                    <setmkbound mk="1" />
-                    <setdrawmode mode="face" />
-                    <drawfilestl file="z_ice_sfc.stl" objname="Ice surface">
-                        <drawscale x="0.001" y="0.001" z="0.001" />
-                    </drawfilestl>
+                    <shapeout file="z_ice_bed" />
+                    <!--<shapeout file="z_ice_bed" />-->
                     <matrixreset />
                     <setmkfluid mk="0" />
                     <setdrawmode mode="face" />
@@ -48,6 +38,22 @@
                     <drawfilestl file="z_mw.stl" objname="Meltwater">
                         <drawscale x="0.001" y="0.001" z="0.001" />
                     </drawfilestl>
+                    <shapeout file="z_mw" />
+                    <!--<shapeout file="z_mw" />-->
+                    <matrixreset />
+                    <setmkbound mk="1" />
+                    <setdrawmode mode="face" />
+                    <drawfilestl file="z_ice_sfc.stl" objname="Ice surface">
+                        <drawscale x="0.001" y="0.001" z="0.001" />
+                    </drawfilestl>
+                    <!--<shapeout file="z_ice_sfc" />-->
+                    <matrixreset />
+                    <setmkbound mk="1" />
+                    <setdrawmode mode="face" />
+                    <drawfilestl file="z_ice_bott.stl" objname="Ice-bottom">
+                        <drawscale x="0.001" y="0.001" z="0.001" />
+                    </drawfilestl>
+                    <!--<shapeout file="z_ice_bott" />-->
                     <matrixreset />
                     <setmkbound mk="2" />
                     <setdrawmode mode="full" />
@@ -323,7 +329,9 @@
             </objreal>
         </motion>
         <vtkout mkboundfirst="11" mkfluidfirst="1">
-            <vtkfile name="GenCase4_linux64__Dp.vtk" mk="11-13" mkbound="0-2" />
+            <vtkfile name="GenCase4_linux64_z_ice_bed_Dp.vtk" mk="11" mkbound="0" />
+            <vtkfile name="GenCase4_linux64_z_mw_Dp.vtk" mk="1" mkfluid="0" />
+            <vtkfile name="GenCase4_linux64__Dp.vtk" mk="12-13" mkbound="1-2" />
         </vtkout>
     </execution>
 </case>

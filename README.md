@@ -96,7 +96,7 @@ Viscosity is the same as run 01.
 
 #### Density
 
-Meltwater density observed in the eastern Amundsen Sea only differs from CDW in density by approximately 0.7 kg/m<sup>3</sup> (P. Dutrieux, pers. comm.). For the purposes of this model, we initialized with a slightly higher density gradient in order to speed up the processes in model-time, in order to simulate 
+Meltwater density observed in the eastern Amundsen Sea only differs from CDW in density by approximately 0.7 kg/m<sup>3</sup> (P. Dutrieux, pers. comm.). For the purposes of this model, we initialized with a slightly higher density gradient in order to speed up the processes in model-time.
 
 #### Atmospheric forcing
 
@@ -144,6 +144,10 @@ The following is a directory tree describing the contents of the repository and 
 ├── GenCase4_linux64_MkCells.vtk                # GenCase output of particle generation cells
 ├── GenCase4_linux64.out                        # command line output of GenCase
 ├── GenCase4_linux64.xml                        # GenCase synthesis xml
+├── GenCase4_linux64_z_ice_bed_Dp.vtk           # quantized (downsized) bed geometry
+├── GenCase4_linux64_z_ice_bott_Dp.vtk          # quantized (downsized) ice bottom geometry
+├── GenCase4_linux64_z_ice_sfc_Dp.vtk           # quantized (downsized) ice surface geometry
+├── GenCase4_linux64_z_mw_Dp.vtk                # quantized (downsized) meltwater bottom geometry
 ├── xCaseThwaites_threephase_linux64_GPU.sh     # bash script used to run all model processing steps (linux/unix version)
 ├── 00_*.xyz                                    # earlier versions of geometry definition files
 ├── z_ice_bed.xyz                               # bed and seafloor geometry XYZ-CSV from BEDMAP2

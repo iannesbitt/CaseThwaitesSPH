@@ -37,7 +37,7 @@ OmpThreads: 8
 [LoadXML]
 List: MAIN
 
-Total operations: 74
+Total operations: 76
 [LoadXML-End  time:0.001s]
 
 [Draw]
@@ -50,11 +50,13 @@ Case parts: 1 x 321z
 Memory: 0.00Gb 0.47Mb (494982)
 
 > MAIN
-FileShapes> _Dp.vtk  shapes:134593  points:5324   (time:0.009s)
-<MAIN (Operations= 59+15+1 = 75)
+FileShapes> z_ice_bed_Dp.vtk  shapes:75638  points:3788   (time:0.006s)
+FileShapes> z_mw_Dp.vtk  shapes:24266  points:625   (time:0.002s)
+FileShapes> _Dp.vtk  shapes:58955  points:1536   (time:0.004s)
+<MAIN (Operations= 61+15+3 = 79)
 
 Triangles: 9250612 (9091717 ignored)
-[Draw-End  time:2.925s]
+[Draw-End  time:141.274s]
 
 [PreparePoints]
 Computing Vtk-Cells data...  (time:0.004s)
@@ -90,13 +92,13 @@ Speed of sound: 92.8706 max(92.8706,46.4353)
 
 Coefh:0.919240 (hdp:1.300002)
 
-[PreparePoints-End  time:0.034s]
+[PreparePoints-End  time:0.046s]
 
 [SaveCase2D]
 GenCase4_linux64_MkCells.vtk  (time:0.000s, shapes:815, points:3260)
-GenCase4_linux64.bi4<double>  (time:0.082s)
+GenCase4_linux64.bi4<double>  (time:0.068s)
 GenCase4_linux64.xml  (time:0.001s)
 
-Save files time: 0.083s
-[SaveCase2D-End  time:0.092s]
+Save files time: 0.069s
+[SaveCase2D-End  time:0.088s]
 

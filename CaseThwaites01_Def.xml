@@ -23,25 +23,14 @@
 			</definition>
 			<commands>
 				<mainlist>
-					<setshapemode>dp | bound</setshapemode>
+					<setshapemode>dp | bound | fluid</setshapemode>
 					<matrixreset />
 					<setmkbound mk="0"/>
 					<setdrawmode mode="face"/>
 					<drawfilestl file="z_ice_bed.stl" objname="Bed">
 						<drawscale x="0.001" y="0.001" z="0.001" />
 					</drawfilestl>
-					<matrixreset />
-					<setmkbound mk="1"/>
-					<setdrawmode mode="face"/>
-					<drawfilestl file="z_ice_bott.stl" objname="Ice-bottom">
-						<drawscale x="0.001" y="0.001" z="0.001" />
-					</drawfilestl>
-					<matrixreset />
-					<setmkbound mk="1"/>
-					<setdrawmode mode="face"/>
-					<drawfilestl file="z_ice_sfc.stl" objname="Ice surface">
-						<drawscale x="0.001" y="0.001" z="0.001" />
-					</drawfilestl>
+					<!--<shapeout file="z_ice_bed" />-->
 					<matrixreset />
 					<setmkfluid mk="0"/>
 					<setdrawmode mode="face"/>
@@ -49,6 +38,21 @@
 					<drawfilestl file="z_mw.stl" objname="Meltwater">
 						<drawscale x="0.001" y="0.001" z="0.001" />
 					</drawfilestl>
+					<!--<shapeout file="z_mw" />-->
+					<matrixreset />
+					<setmkbound mk="1"/>
+					<setdrawmode mode="face"/>
+					<drawfilestl file="z_ice_sfc.stl" objname="Ice surface">
+						<drawscale x="0.001" y="0.001" z="0.001" />
+					</drawfilestl>
+					<!--<shapeout file="z_ice_sfc" />-->
+					<matrixreset />
+					<setmkbound mk="1"/>
+					<setdrawmode mode="face"/>
+					<drawfilestl file="z_ice_bott.stl" objname="Ice-bottom">
+						<drawscale x="0.001" y="0.001" z="0.001" />
+					</drawfilestl>
+					<!--<shapeout file="z_ice_bott" />-->
 					<matrixreset />
 					<setmkbound mk="2"/>
 					<setdrawmode mode="full"/>
