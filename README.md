@@ -126,6 +126,18 @@ The following is a directory tree describing the contents of the repository and 
 ├── bin                                         # non-SPH scripts
 │   ├── timelapse10                             # 10 fps ffmpeg timelapse bash script (linux/unix)
 │   └── timelapse20                             # 20 fps ffmpeg timelapse bash script (linux/unix)
+├── gis 										# GIS and geometry
+│   ├── geom_thwaites.* 						# shapefile of transect used to query BEDMAP2 elevations
+│   ├── geom_thwaites_pts.* 					# points along transect used for query (1 km spacing)
+│   ├── geom_thwaites_vals.csv 					# CSV of values queried along transect for 1) ice surface elevation, 2) ice bottom elevation, and 3) bathymetry and bed
+│   ├── model_thwaites_pandasDF.csv 			# intermediate step with ice surface, ice bottom, bathymetry, and X distance
+│   ├── model_thwaites_lyrs_pandasDF.csv 		# intermediate step adding meltwater column and other potential features
+│   └── xyz 									# XYZ surfaces output from pandas and modified as spreadsheets
+│       ├── *_z_*.xyz 							# previous versions of XYZ geometry
+│       ├── z_ice_bed.xyz 						# most recent version of bed geometry
+│       ├── z_ice_bott.xyz 						# most recent version of ice bottom geometry
+│       ├── z_ice_sfc.xyz 						# most recent version of ice surface geometry
+│       └── z_mw.xyz 							# most recent version of meltwater (bottom) geometry
 ├── casedata.dsphdata                           # SPH synthesis of case data described by case description XML
 ├── CaseThwaites01_Def.xml                      # case description XML
 ├── DSPH_Case.FCStd                             # DesignSPHysics file used to create the initial geometry
