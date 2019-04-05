@@ -118,7 +118,7 @@ We re-initialized with the same wind paddle geometry and velocity.
 
 #### Runtime
 
-This run was 30 model-seconds long and consists of 3000 samples (sample rate 0.01 model-seconds). It took ~30 hours to compute on a NVIDIA GeForce GTX 1060.
+This run was 30 model-seconds long and consists of 3000 samples (sample rate 0.01 model-seconds). It took ~28 hours to compute on a NVIDIA GeForce GTX 1060.
 
 ## Description of project contents
 
