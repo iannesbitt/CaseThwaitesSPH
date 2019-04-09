@@ -23,7 +23,7 @@
 			</definition>
 			<commands>
 				<mainlist>
-					<setshapemode>dp | bound | fluid | mk</setshapemode>
+					<setshapemode>dp | bound | fluid</setshapemode>
 					<matrixreset />
 					<setmkbound mk="0"/>
 					<setdrawmode mode="face"/>
@@ -197,7 +197,7 @@
                 <phasetype value="1"/>
             </property>         
 			<property name="meltwater">
-				<rhop0 value="1020"/>
+				<rhop0 value="1026"/>
 				<gamma value="7"/>
 				<cs0 value="20"/>
 				<visco value="0.1"/>

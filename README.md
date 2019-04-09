@@ -120,6 +120,35 @@ We re-initialized with the same wind paddle geometry and velocity.
 
 This run was 30 model-seconds long and consists of 3000 samples (sample rate 0.01 model-seconds). It took ~28 hours to compute on a NVIDIA GeForce GTX 1060.
 
+## Run 03 - 2019-04-06
+### Geometry
+
+![Run 03 geometry](animations/03_geometry.png)
+
+After run 02 we determined that the density gradient between meltwater and CDW was not high enough. 
+
+### Initialization
+
+#### Viscosity
+
+Viscosity is the same as run 01.
+
+#### Density
+
+We changed meltwater density to 1020 kg m<sup>3</sup>, making the gradient approximately an order of magnitude greater than in-situ measurements show, in order to more strongly separate meltwater from deep water. This stronger density gradient balances out the greater effective wind shear at the interface between ocean and atmosphere in modeled vs. real conditions.
+
+- **Air**: 1.44 kg m<sup>-3</sup>
+- **Meltwater**: 1020 kg m<sup>-3</sup>
+- **CDW**: 1028 kg m<sup>-3</sup>
+
+#### Atmospheric forcing
+
+We re-initialized with the same wind paddle geometry and velocity.
+
+#### Runtime
+
+This run was 30 model-seconds long and consists of 3000 samples (sample rate 0.01 model-seconds). It took ~28 hours to compute on a NVIDIA GeForce GTX 1060.
+
 ## Description of project contents
 
 ### File organization

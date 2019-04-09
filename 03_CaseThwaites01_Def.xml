@@ -23,7 +23,7 @@
 			</definition>
 			<commands>
 				<mainlist>
-					<setshapemode>dp | bound | fluid | mk</setshapemode>
+					<setshapemode>dp | bound | fluid</setshapemode>
 					<matrixreset />
 					<setmkbound mk="0"/>
 					<setdrawmode mode="face"/>
