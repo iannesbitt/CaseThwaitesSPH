@@ -106,7 +106,7 @@ Viscosity is the same as run 01.
 
 Meltwater density observed in the eastern Amundsen Sea only differs from CDW in density by approximately 0.33 kg/m<sup>3</sup> (P. Dutrieux, pers. comm.; [Jenkins et al., 2018](https://doi.org/10.1038/s41561-018-0207-4)). For the purposes of this experiment, we initialized with a slightly higher density gradient in order to speed up the physical processes in model-time.
 
-We also increased the density value of atmospheric particles to more accurately reflect that of air masses which contribute to catabatic wind flow from the ice sheet to the Southern Ocean.
+We also increased the density value of atmospheric particles to more accurately reflect that of air masses which contribute to katabatic wind flow from the ice sheet to the Southern Ocean.
 
 - **Air**: 1.44 kg m<sup>-3</sup>
 - **Meltwater**: 1026 kg m<sup>-3</sup>
