@@ -59,7 +59,7 @@ if [ $errcode -eq 0 ]; then
 fi
 
 if [ $errcode -eq 0 ]; then
-  $partvtk -dirin $dirout -savevtk $dirout2/PartTank -onlytype:-all,bound
+  $partvtk -dirin $dirout -savevtk $dirout2/PartTank -onlytype:-all,bound -vars:+press,+mk
   errcode=$?
 fi
 

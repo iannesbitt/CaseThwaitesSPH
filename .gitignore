@@ -2,3 +2,5 @@
 animations/*/*
 z_*.stl
 01_z_*.stl
+*.pwin
+*.pvd
