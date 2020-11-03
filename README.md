@@ -1,6 +1,6 @@
 # CaseThwaitesSPH
 
-![Image of dynamics in model output](animations/00_vel_type_id.0900.png)
+![Image of dynamics in model output](animations/03_vel_id_01.2492.png)
 
 ## What
 
